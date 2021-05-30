@@ -14,3 +14,5 @@ while num != 1:
         num /= count
 
 print(count)
+
+# Answer - 6857

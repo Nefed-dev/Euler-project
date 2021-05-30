@@ -20,16 +20,18 @@ a, b = 1, 2
 fib = [1, 2]
 fib_even = []
 
-while b < 4*10**6:
+while b < 4 * 10 ** 6:
     if a % 2 == 0:
         fib_even.append(a)
     if b % 2 == 0:
         fib_even.append(b)
     a = a + b
     b = a + b
-    if a > 4*10**6:
+    if a > 4 * 10 ** 6:
         break
     fib.append(a)
     fib.append(b)
 
 print(sum(fib_even))
+
+# Answer - 4613732

@@ -4,15 +4,20 @@
 #
 # Найдите самый большой палиндром, полученный умножением двух трехзначных чисел.
 
+
+def is_palindrome(num):
+    raw = str(num)
+    reversed_num = raw[::-1]
+    if raw == reversed_num:
+        return True
+
+
 palindrome = []
-for x in range(1, 1000):
-    for y in range(1, 1000):
-        z = x * y
+for i in range(100, 1000):
+    for j in range(100, 1000):
+        if is_palindrome(i * j):
+            palindrome.append(i * j)
 
+print(max(palindrome))
 
-        if str(z) == str(z)[::-1]:
-            palindrome.append(z)
-
-print(palindrome[-1])
-
-# Ответ: 90909
+# Answer - 906609
